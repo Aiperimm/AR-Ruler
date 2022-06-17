@@ -51,8 +51,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         material.diffuse.contents = UIColor.red
         
         dotGeometry.materials = [material]
-        let dorNode = SCNNode(geometry: dotGeometry)
+        let dotNode = SCNNode(geometry: dotGeometry)
         
+        dotNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,
+                                      hitResult.worldTransform.columns.3.y,
+                                      hitResult.worldTransform.columns.3.z)
+        
+        sceneView.scene.rootNode.addChildNode(dotNode)
     }
     
 }
