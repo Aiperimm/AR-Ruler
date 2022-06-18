@@ -81,6 +81,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                             pow(end.position.y - start.position.y, 2) +
                             pow(end.position.y - start.position.z, 2))
         
+        updateText(text: "\(abs(distance))")
+        
       //  distance = √ ((x2 - x1)2 + (y2 - y1)2 + (z2 - z1)2)
+    }
+    
+    func updateText(text: String) () {
+        
+        let textGeometry = SCNText(string: text, extrusionDepth: 1.0)
+        
+        text 
+        
     }
 }
