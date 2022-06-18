@@ -42,6 +42,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             for dot in dotNodes {
                 dot.removeFromParentNode()
             }
+            dotNodes = [SCNNode] ()
         }
         
         if let touchLocation = touches.first?.location(in: sceneView){
